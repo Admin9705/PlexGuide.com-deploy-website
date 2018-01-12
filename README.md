@@ -25,14 +25,19 @@
 ----------------------------------------------------------------------
 
 1. Ensure that you installed PlexGuide as Noted Above - This relies on certain programs
+
+```
+sudo git clone https://github.com/Admin9705/PlexGuide.com-deploy-website.git /opt/deploysite
+```
+
 2. Place this in the terminal to place your variables for you own wordpress website
 
 ```
-ansible-playbook /opt/plexguide/ansible/personal.yml
+ansible-playbook /opt/deploysite/ansible/personal.yml
 ```
 
 3. Then to execute your wordpress, put the following in:
 
 ```
-ansible-playbook /opt/plexguide/ansible/wordpress.yml
+ansible-playbook /opt/deploysite/ansible/wordpress.yml
 ```

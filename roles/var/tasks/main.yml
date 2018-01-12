@@ -3,20 +3,21 @@
 - name: Create Basic Directories
   file: "path={{item}} state=directory mode=0775 owner=1000 group=1000"
   with_items:
-    - /opt/appdata/personal
+    - /opt/appdata/deploysite
+    - /opt/appdata/sitewp
 
 ########## Remove old existing config file
 - name: Removing File Directories
   file:
     state: absent
     path:
-      - /opt/appdata/personal/var.yml
+      - /opt/appdata/deploysite/var.yml
 
 ########## Copy Traefik config files
 - name: Installing config prerequisites
   template:
     src: var.yml
-    dest: /opt/appdata/personal/var.yml
+    dest: /opt/appdata/deploysite/var.yml
     force: yes
 
 ########## Ask user for e-mail & domain
@@ -37,12 +38,12 @@
 ########## Replace template domain and email with the user input
 - name: Replace yourdomain.com with user input
   replace:
-    path: /opt/appdata/plexguide/var.yml
+    path: /opt/appdata/deploysite/var.yml
     regexp: domain.com
     replace: "{{domain_input.user_input}}"
 
 - name: Replace your@email.com with user input
   replace:
-    path: /opt/appdata/plexguide/var.yml
+    path: /opt/appdata/deploysite/var.yml
     regexp: user@gmail.com
     replace: "{{email_input.user_input}}"
