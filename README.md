@@ -28,11 +28,11 @@
 2. Place this in the terminal to place your variables for you own wordpress website
 
 ```
-ansible-playbook /opt/plexguide/ansible/personal.
+ansible-playbook /opt/plexguide/ansible/personal.yml
 ```
 
 3. Then to execute your wordpress, put the following in:
 
 ```
-ansible-playbook /opt/plexguide/ansible/wordpress.var
+ansible-playbook /opt/plexguide/ansible/wordpress.yml
 ```
