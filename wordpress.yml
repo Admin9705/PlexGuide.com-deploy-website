@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   vars_files:
-    - /opt/appdata/personal/var.yml
+    - /opt/appdata/deploysite/var.yml
 
   roles:
   - { role: wordpress, tags: ['wordpress'] }
