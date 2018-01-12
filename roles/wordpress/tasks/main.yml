@@ -40,9 +40,9 @@
       APP: wordpress
       PUID: "1000"
       PGID: "1000"
-      VIRTUAL_HOST: "{{domain}}"
+      VIRTUAL_HOST: "wp.{{domain}}"
       VIRTUAL_PORT: 80
-      LETSENCRYPT_HOST: "{{domain}}"
+      LETSENCRYPT_HOST: "wp.{{domain}}"
       LETSENCRYPT_EMAIL: "{{email}}"
       WORDPRESS_DB_PASSWORD: SUPERSTrongWp@$$
     links:
