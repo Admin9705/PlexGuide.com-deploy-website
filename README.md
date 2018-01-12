@@ -33,11 +33,11 @@ sudo git clone https://github.com/Admin9705/PlexGuide.com-deploy-website.git /op
 2. Place this in the terminal to place your variables for you own wordpress website
 
 ```
-ansible-playbook /opt/deploysite/config.yml
+sudo ansible-playbook /opt/deploysite/config.yml
 ```
 
 3. Then to execute your wordpress, put the following in:
 
 ```
-ansible-playbook /opt/deploysite/wordpress.yml
+sudo ansible-playbook /opt/deploysite/wordpress.yml
 ```
